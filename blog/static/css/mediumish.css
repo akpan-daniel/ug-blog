@@ -71,7 +71,7 @@ section {
 	background-origin:border-box!important;
 	border-top-left-radius:2px;
 }
-.listfeaturedtag .card-block {
+.listfeaturedtag .card-body {
 	padding-left:0;
 }
 .listfeaturedtag h2.card-title,.listrecent h2.card-title {
@@ -164,9 +164,6 @@ span.post-name a,span.post-read-more a:hover {
 	border-radius:30px;
 	overflow:hidden;
 	border:1px solid rgba(0,0,0,0.04);
-}
-.mediumnavigation .form-inline {
-	margin-left:15px;
 }
 .mediumnavigation .form-inline .btn {
 	margin-left:-50px;
@@ -286,7 +283,7 @@ blockquote {
 		position:relative;
 		margin-top:30px;
 	}
-	.listfeaturedtag .card-block {
+	.listfeaturedtag .card-body {
 		padding:20px;
 	}
 }
@@ -314,11 +311,11 @@ blockquote {
 	border:0;
 }
 .card {
-	border-radius:4px;
+	border-radius:8px;
 }
 .card .img-thumb {
-	border-top-right-radius:4px;
-	border-top-left-radius:4px;
+	border-top-right-radius:8px;
+	border-top-left-radius:8px;
 }
 ul.tags {
 	list-style:none;

@@ -31,6 +31,10 @@ class Post(models.Model):
         return self.upvotes.count()
 
     @property
+    def get_author(self) -> str:
+        return '{} {}'.format(self.author.first_name, self.author.last_name)
+
+    @property
     def get_downvotes(self) -> int:
         return self.downvotes.count()
 

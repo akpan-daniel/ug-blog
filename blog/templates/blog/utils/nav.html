@@ -1,0 +1,55 @@
+{% load static %}
+<!-- Begin Nav
+================================================== -->
+<header>
+    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top mediumnavigation">
+        <div class="container">
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <h2>UG|B</h2>
+            </a>
+            <!-- End Logo -->
+        
+            <div class="collapse navbar-collapse mr-5" id="navbarTogg">
+                <!-- Begin Menu -->
+                {% if request.user.is_authenticated %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Create Post<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="post.html">My Posts</a>
+                    </li>
+                </ul>
+                {% endif %}
+                <!-- End Menu -->
+                <!-- Begin Search -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control" type="text" placeholder="Search">
+                    <span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+                </form>
+                <!-- End Search -->
+            </div>
+
+            <!-- Begin User Profile -->
+            <div class="navbar-nav">
+                {% if request.user.is_authenticated %}
+                <a class="nav-item" href="#">
+                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle border">
+                </a>
+                {% else %}
+                <a href="#" class="nav-item border-secondary">
+                    Login/Sign Up
+                </a>
+                {% endif %}
+            </div>
+            <!-- End User -->
+            
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogg" aria-controls="navbarTogg" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+<!-- End Nav
+================================================== -->

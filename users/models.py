@@ -13,6 +13,6 @@ def upload_path(instance, filename):
 
 class User(AbstractUser):
     picture = models.ImageField(
-        default='default.jpg', upload_to=upload_path)
+        default='default.png', upload_to=upload_path)
     bio = models.TextField(max_length=300, blank=True)
     location = models.CharField(max_length=30, blank=True)
